@@ -1,0 +1,232 @@
+.skills-content,
+.tools-learning
+	display: flex
+	flex-direction: column
+
+
+.skill-icon
+  background-image: url('../images/skills-sprite.svg')
+
+.skill-icon,
+.tool,
+.learning-icon
+  background-size: cover
+
+.tool,
+.learning-icon
+  background-image: url('../images/tools-sprite.svg')
+
+.skills-holder
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  width: 220px
+  margin: 0 auto 2em
+  @media (min-width: 320px)
+    width: 265px
+  .skill
+    display: flex
+    margin-bottom: .8em
+    align-items: center
+  .skill-icon
+    width: 100px
+    height: 116px
+
+
+.html-icon
+  background-position: 0 0
+  &:hover
+    background-position: 1530px
+
+.css-icon
+  background-position: 1428px
+  &:hover
+    background-position: 1326px
+
+.bs-icon
+  background-position: 1224px
+  &:hover
+    background-position: 1122px
+
+.resp-icon
+  background-position: 1020px
+  &:hover
+    background-position: 918px
+
+.js-icon
+  background-position: 816px
+  &:hover
+    background-position: 714px
+
+.jQ-icon
+  background-position: 612px
+  &:hover
+    background-position: 510px
+
+.ill-icon
+  background-position: 408px
+  &:hover
+    background-position: 306px
+
+.ps-icon
+  background-position: 204px
+  &:hover
+    background-position: 102px
+
+.tool,
+.learning-icon
+  width: 88px
+  height: 101px
+
+.tool-holder
+  position: relative
+  width: 265px
+  min-width: 265px
+  height: 260px
+  margin: 0 auto
+  .tool
+    position: absolute
+    &:nth-of-type(1)
+      left: 44px
+      background-position: 1248px
+      &:hover
+        background-position: 1159px
+    &:nth-of-type(2)
+      top: 79px
+      background-position: 1070px
+      &:hover
+        background-position: 981px
+    &:nth-of-type(3)
+      top: 158px
+      left: 44px
+      background-position: 892px
+      &:hover
+        background-position: 803px
+    &:nth-of-type(4)
+      top: 158px
+      right: 44px
+      background-position: 714px
+      &:hover
+        background-position: 625px
+    &:nth-of-type(5)
+      top: 79px
+      right: 0
+      background-position: 536px
+      &:hover
+        background-position: 447px
+    &:nth-of-type(6)
+      right: 44px
+      top: 0
+      background-position: 357px
+      &:hover
+        background-position: 268px
+  .tool-name
+    position: absolute
+    width: 83px
+    top: 95px
+    left: 91px
+
+.learning
+  margin-top: 1.5em
+  h3
+    margin: 0 0 .5em
+  .learning-icon
+    position: relative
+    margin: 0 auto 1em
+    background-position: 179px
+    &:hover
+      background-position: 90px
+
+
+@media (min-width: 480px) and (max-width: 767px)
+  .skills-holder
+    width: 336px
+    margin-bottom: 2.5em
+    .skill
+      &:nth-child(1)
+        order: 1
+      &:nth-child(2)
+        order: 3
+      &:nth-child(3)
+        order: 2
+      &:nth-child(4)
+        order: 7
+      &:nth-child(5)
+        order: 4
+        margin-right: 37px
+      &:nth-child(6)
+        order: 5
+      &:nth-child(7)
+        order: 6
+      &:nth-child(8)
+        order: 8
+  .tool-holder
+    margin-bottom: 1em
+
+@media(min-width: 768px)
+  .skills-holder
+    width: 550px
+    margin-bottom: 3em
+    .skill
+      margin-left: .5em
+      margin-right: .5em
+      &:nth-child(1)
+        order: 1
+      &:nth-child(2)
+        order: 5
+      &:nth-child(3)
+        order: 2
+      &:nth-child(4)
+        order: 6
+      &:nth-child(5)
+        order: 3
+      &:nth-child(6)
+        order: 7
+      &:nth-child(7)
+        order: 4
+      &:nth-child(8)
+        order: 8
+      &:nth-child(1),
+      &:nth-child(2)
+        margin-left: 0
+      &:nth-child(8),
+      &:nth-child(7)
+        margin-right: 0
+  .tools-learning
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    .tool-holder
+      margin: 0
+    .learning
+      margin-top: 0
+      .learning-icon
+        margin-bottom: .5em
+
+@media(min-width: 1020px)
+  .skills
+    .container
+      max-width: 950px
+  .skills-content
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    .skills-holder
+      max-width: 556px
+      margin: 0
+      .skill
+        margin-bottom: 30px
+        &:nth-child(even)
+          margin-top: 30px
+          margin-bottom: 0
+    .tools-learning
+      flex-direction: column
+      .learning
+        margin-top: 1em
+
+@media(min-width: 1200px)
+  .skills
+    .container
+      max-width: 1000px

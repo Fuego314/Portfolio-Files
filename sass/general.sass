@@ -1,0 +1,50 @@
+::root
+	font-size: 16px
+
+*, *::after, *::before
+	box-sizing: border-box
+
+body
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.container
+	max-width: 750px
+	margin: 0 auto
+	padding: 1em 1em 2em
+	@media(min-width: 768px)
+		padding: 2em 1em 3.5em 1em
+	@media(min-width: 1020px)
+		max-width: 950px
+		padding: 2em 1em 4.5em 1em
+
+section,
+footer
+	position: relative
+	z-index: 20
+
+.light-bg
+	background-color: #f1f1f1
+
+.btn
+	position: relative
+	display: block
+	margin: 0 auto
+	padding: .73em 1.3em .65em
+	border: 2px solid #2e3233
+	border-radius: 25px
+	background: transparent
+	transition: .3s all
+
+h2
+	margin-top: 1.3em
+	margin-bottom: 1.15em
+
+h1, h2, h3, h4, p,
+button, .form-control
+	transition: all .3s
+
+@media(min-width: 1020px)
+	.skills, .work, .contact
+		h2
+			margin-bottom: 1.5em
