@@ -34,11 +34,15 @@ $(function () {
     // Get offset
     var navOffset = 0;
 
+    if (windowWidth < 768 && $(this).attr('href') !== '#about') {
+      navOffset = 58;
+    }
+
     // Store hash
     var hash = this.hash;
 
     $('html, body').animate({
-      scrollTop: $(this.hash).offset().top
+      scrollTop: $(this.hash).offset().top - navOffset
     }, 700, function () {
 
       // When done, add hash to url
@@ -125,6 +129,19 @@ $(function () {
       setTimeout(function () {
         $('.preview-info').css('opacity', '0');
       }, 50);
+    }
+  });
+
+  var showingMore = false;
+  $('.see-more').click(function () {
+    $('.work-display').toggleClass('showing-more');
+    showingMore = !showingMore;
+    if (showingMore) {
+      $('.see-more h4').text('show less projects');
+      $('.see-more img').css('transform', 'rotateZ(180deg)');
+    } else {
+      $('.see-more h4').text('show more projects');
+      $('.see-more img').css('transform', 'rotateZ(0deg)');
     }
   });
 });

@@ -1,11 +1,17 @@
 .work
 	background: #fff
+	.container
+		padding: 1em 1em 0
+		@media(min-width: 1080px)
+			padding: 1em 1em 4.5em
 .work-display
 	position: relative
 	width: 256px
-	height: 1313px
+	height: 982px
 	min-width: 256px
-	margin: 0 auto 2em
+	margin: 0 auto 1em
+	overflow: hidden
+	transition: .5s all
 	.work-previews
 		position: relative
 		height: 0
@@ -45,6 +51,56 @@
 				border-color: #fcfcfc
 				&:hover
 					background-color: #fcfcfc
+					.st0
+						fill: #E54E8C
+
+			.dribbble
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-items: center
+				width: 140px
+				height: 34px
+				padding: 0
+				&:hover
+					color: #E54E8C
+				svg
+					width: 2.1em
+					margin-right: .6em
+				.st0
+					fill: #fff
+				@media(min-width: 340px)
+					height: 38px
+				@media(min-width: 410px)
+					width: 160px
+					padding-left: 1.05em
+					svg
+						position: absolute
+						left: 6px
+				@media(min-width: 768px)
+					padding-left: 1.3em
+				@media(min-width: 1080px)
+					svg
+						width: 1.7em
+
+.see-more
+	cursor: pointer
+	h4
+		margin: 0
+		@media(min-width: 768px)
+			margin: 1.5em auto .5em
+	img
+		display: block
+		width: 2em
+		margin: .5em auto 1.75em
+		@media(min-width: 768px)
+			margin: .5em auto 2.5em
+
+
+.see-more,
+.see-more h4
+.see-more img
+	transition: .4s all
 
 .work-previews .preview.hover .preview-info
 	@media(max-width: 767px)
@@ -66,7 +122,10 @@
 		opacity: 1
 		height: 100%
 
-
+.travel-pre
+	background-position: 256px * 9
+.jmb-pre
+	background-position: 256px * 8
 .weather-pre
 	background-position: 256px * 7
 .bodyC-pre
@@ -91,7 +150,7 @@
 @media(min-width: 340px)
 	.work-display
 		width: 288px
-		height: 1456px
+		height: 1090px
 		.icon-row .work-icon
 			width: 4.5em
 			height: 4.5em
@@ -100,6 +159,10 @@
 			height: 168px
 		.preview-img
 			background-image: url('../images/preview-sprite-sm.jpg')
+	.travel-pre
+		background-position: 288px * 9
+	.jmb-pre
+		background-position: 288px * 8
 	.weather-pre
 		background-position: 288px * 7
 	.bodyC-pre
@@ -118,7 +181,7 @@
 @media(min-width: 410px)
 	.work-display
 		width: 344px
-		height: 1720px
+		height: 1288px
 		.icon-row .work-icon
 			width: 5.375em
 			height: 5.375em
@@ -129,6 +192,10 @@
 			justify-content: space-around
 		.preview-img
 			background-image: url('../images/preview-sprite-md.jpg')
+	.travel-pre
+		background-position: 344px * 9
+	.jmb-pre
+		background-position: 344px * 8
 	.weather-pre
 		background-position: 344px * 7
 	.bodyC-pre
@@ -155,23 +222,26 @@
 		margin: 0 auto 1.5em 0
 	.work-display
 		width: 100%
-		height: 924px
+		height: 636px
 		justify-content: center
 		.work-previews
 			display: flex
-			flex-direction: column
+			flex-direction: row
 			flex-wrap: wrap
-			width: 719px
-			height: 868px
+			justify-content: space-around
+			width: 100%
+			height: 1086px
 			margin: 0 auto
 			.preview
 				width: 344px
-				&:nth-child(-n+4)
-					margin-right: 28px
 			.preview-info
 				height: 0%
 			.info-content
 				justify-content: space-around
+
+@media(min-width: 1020px)
+	.see-more img
+		margin-bottom: 0
 
 @media(min-width: 1080px)
 	.work
@@ -180,7 +250,9 @@
 		.work-display,
 		.work-previews
 			width: 1032px
-			height: 683px
+			height: 686px
+		.see-more
+			display: none
 	.work-display
 		justify-content: center
 		.work-previews
@@ -188,8 +260,8 @@
 			justify-content: space-around
 		 .preview
 			 margin-bottom: 2.5em
-				&:nth-child(-n+4)
-					margin-right: 0
+		.preview.calc
+			display: none
 
 @media(min-width: 1170px)
 	.work
@@ -203,3 +275,14 @@
 			width: 1100px
 		.work-previews
 			transition: all .4s
+
+.work-display.showing-more
+	height: 1644px
+	@media (min-width: 340px)
+		height: 1825px
+	@media (min-width: 410px)
+		height: 2156px
+	@media (min-width: 768px)
+		height: 1072px
+	@media (min-width: 1080px)
+		height: 686px
